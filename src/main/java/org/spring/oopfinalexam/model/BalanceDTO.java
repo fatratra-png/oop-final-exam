@@ -1,4 +1,4 @@
-package org.spring.oopfinalexam.dto;
+package org.spring.oopfinalexam.model;
 
 import java.math.BigDecimal;
 import java.util.UUID;

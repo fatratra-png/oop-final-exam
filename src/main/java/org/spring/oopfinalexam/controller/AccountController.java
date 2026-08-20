@@ -3,15 +3,14 @@ package org.spring.oopfinalexam.controller;
 import java.math.BigDecimal;
 import java.util.List;
 import java.util.UUID;
-import java.math.BigDecimal;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
+import org.spring.oopfinalexam.model.BalanceDTO;
 import org.spring.oopfinalexam.model.Transaction;
 import org.spring.oopfinalexam.service.AccountService;
-import org.spring.oopfinalexam.dto.BalanceDTO;
 
 @RestController
 public class AccountController {
