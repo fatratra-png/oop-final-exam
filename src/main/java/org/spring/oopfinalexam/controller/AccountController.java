@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import org.spring.oopfinalexam.model.Transaction;
 import org.spring.oopfinalexam.service.AccountService;
+import org.spring.oopfinalexam.dto.BalanceDTO;
 
 @RestController
 public class AccountController {
@@ -26,7 +27,8 @@ public class AccountController {
     }
 
     @GetMapping("/account/{id}/balance")
-    public BigDecimal getBalance(@PathVariable UUID id) {
-        return accountService.getBalance(id);
+    public BalanceDTO getBalance(@PathVariable UUID id) {
+        java.math.BigDecimal balance = accountService.getBalance(id);
+        return new BalanceDTO(id, balance);
     }
 }
