@@ -3,6 +3,7 @@ package org.spring.oopfinalexam.controller;
 import java.math.BigDecimal;
 import java.util.List;
 import java.util.UUID;
+import java.math.BigDecimal;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -28,7 +29,7 @@ public class AccountController {
 
     @GetMapping("/account/{id}/balance")
     public BalanceDTO getBalance(@PathVariable UUID id) {
-        java.math.BigDecimal balance = accountService.getBalance(id);
+        BigDecimal balance = accountService.getBalance(id);
         return new BalanceDTO(id, balance);
     }
 }
