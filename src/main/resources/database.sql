@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS accounts (
 
 CREATE TABLE IF NOT EXISTS transactions (
     id                UUID PRIMARY KEY,
-    account_id        UUID NOT NULL REFERENCES accounts(id),
+    account_id        UUID DEFAULT NULL REFERENCES accounts(id),
     created_at        TIMESTAMPTZ NOT NULL,
     transaction_type  VARCHAR(10) NOT NULL CHECK (transaction_type IN ('IN', 'OUT')),
     amount            NUMERIC(19, 2) NOT NULL,
